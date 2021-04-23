@@ -1,0 +1,165 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+@font-face {
+    font-family: 'Bodoni 72';
+    font-style: normal;
+    font-weight: 400;
+    src: url(bodoni72/Bodoni72-Book.ttf) format('ttf');
+}
+@font-face {
+    font-family: 'Bodoni 72';
+    font-style: bold;
+    font-weight: 700;
+    src: url(bodoni72/Bodoni72-Bold.ttf) format('ttf');
+}
+@font-face {
+    font-family: 'Bodoni 72';
+    font-style: italic;
+    font-weight: 400;
+    src: url(bodoni72/Bodoni72-BookIta.ttf) format('ttf');
+}
+
+* {
+    font-family: 'Nanum Gothic', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    position: fixed;
+    left: 0; top: 0;
+    width: 100px; height: 100%;
+    z-index: 1;
+}
+.back {
+    position: absolute;
+    left: 50px; top: 50%;
+    width: 20px; height: 20px;
+    transform: translateY(-50%);
+    background: url(../images/left-arrow.png) no-repeat center / cover;
+    opacity: 0.7;
+}
+.back a {
+    display: block;
+    width: 100%; height: 100%;
+}
+
+#fullpage { text-align: center; }
+.section h2 {
+    text-transform: uppercase;
+    font-size: 2em;
+    font-weight: normal;
+    margin: 10px 0;
+}
+
+#title h2, #title p {
+    font-family: 'Bodoni 72';
+    font-weight: 400;
+    font-style: normal;
+}
+#title h2 {
+    font-size: 1.85em;
+    line-height: 0.85;
+}
+#title p {
+    font-size: 0.95em;
+}
+#title h4 {
+    font-size: 0.85em;
+    margin: 10px;
+}
+
+.intro_img {
+    width: 50%;
+    margin: 30px auto;
+}
+.intro_img img {
+    width: 100%;
+}
+
+#design h2 {
+    margin-bottom: 80px;
+}
+#design h4 {
+    position: relative;
+}
+#design h4::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -10px;
+    width: 30px;
+    height: 2px;
+    background-color: #555;
+}
+.color, .typo, .keyword {
+    width: 80%;
+    margin: 0 auto 50px;
+}
+.color h4, .typo h4, .keyword h4 {
+    float: left;
+    width: 25%;
+    text-align: left;
+}
+.color_list, .typo_list, .keyword_list {
+    float: left;
+    width: 75%;
+}
+.color_list li, .typo_list li, .keyword_list li {
+    float: left;
+    width: 33.3333%;
+}
+.color_list div {
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px #ddd;
+}
+.color_list li:nth-child(1) div {
+    background-color: #646f5e;
+}
+.color_list li:nth-child(2) div {
+    background-color: #dd9f5e;
+}
+.color_list li:nth-child(3) div {
+    background-color: #f4f3f2;
+}
+.typo_list li {
+    font-family: 'Bodoni 72'
+}
+.typo_list li:nth-child(1) {
+    font-size: 36px;
+    line-height: 36px;
+}
+.typo_list li:nth-child(2) {
+    font-size: 24px;
+    line-height: 36px;
+}
+.typo_list li:nth-child(3) {
+    font-size: 16px;
+    line-height: 36px;
+}
+.keyword_list li p {
+    width: 75px;
+    height: 75px;
+    margin: 0 auto;
+    line-height: 67px;
+    font-size: 0.85em;
+    border-radius: 50%;
+    border: 5px solid #646f5e;
+}
+
+#pc img {
+    display: block;
+    width: 55%;
+    margin: 0 auto;
+}
+#mobile img {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+}

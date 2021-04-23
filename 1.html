@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/1.css">
+    <link rel="stylesheet" href="fullPage.js-2.9.7/dist/jquery.fullpage.css">
+    <link rel="stylesheet" href="fullPage.js-2.9.7/dist/jquery.fullpage.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="fullPage.js-2.9.7/dist/jquery.fullpage.js"></script>
+    <script src="fullPage.js-2.9.7/dist/jquery.fullpage.min.js"></script>
+    <script src="fullPage.js-2.9.7/dist/jquery.fullpage.extensions.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="back"><a href="index.html"></a></div>
+    </header>
+    <div id="fullpage">
+        <section id="title" class="section">
+            <h2>Zweig</h2>
+            <p>scent from nature</p>
+            <h4>branding and website design</h4>
+        </section>
+        <section id="intro" class="section">
+            <div class="inner">
+                <h2>INTRO</h2>
+                <p>가상의 자연주의 향수 브랜드 ZWEIG을 구상하여<br>브랜드 특유의 차분하고 고급스러운 느낌을 살리고자 하였습니다.</p>
+                <div class="intro_img">
+                    <img src="images/main_mockup.png" alt="main_mockup">
+                </div>
+            </div>
+        </section>
+        <section id="design" class="section">
+            <div class="inner">
+                <h2>DESIGN</h2>
+                <div class="color clear">
+                    <h4>color</h4>
+                    <ul class="color_list clear">
+                        <li>
+                            <div></div>
+                            <p>#646f5e</p>
+                        </li>
+                        <li>
+                            <div></div>
+                            <p>#dd9f5e</p>
+                        </li>
+                        <li>
+                            <div></div>
+                            <p>#f4f3f2</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="typo clear">
+                    <h4>typo</h4>
+                    <ul class="typo_list clear">
+                        <li>Bodoni72 36px</li>
+                        <li>Bodoni72 24px</li>
+                        <li>Bodoni72 16px</li>
+                    </ul>
+                </div>
+                <div class="keyword clear">
+                    <h4>keyword</h4>
+                    <ul class="keyword_list clear">
+                        <li>
+                            <p>자연주의</p>
+                        </li>
+                        <li>
+                            <p>모던함</p>
+                        </li>
+                        <li>
+                            <p>고급스러움</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="pc" class="section">
+            <div class="inner">
+                <h2>PC LAYOUT</h2>
+                <img src="images/pc.png" alt="pc layout">
+            </div>
+        </section>
+        <section id="mobile" class="section">
+            <div class="inner">
+                <h2>MOBILE LAYOUT</h2>
+                <img src="images/mobile.png" alt="mobile layout">
+            </div>
+        </section>
+        <section id="link" class="section">
+            <h2><a href="http://boxingday09.dothome.co.kr/">click to enter</a></h2>
+        </section>
+    </div>
+    <script>
+        $("#fullpage").fullpage({
+            navigation: true,
+            autoScrolling: true,
+            scrollHorizontally: true,
+            scrollSpeed: 1000,
+            sectionsColor: ['#df9e59', '#dbdbdb', '#fafafa', '#dbdbdb', '##fafafa', '#dbdbdb'],
+            anchors: ['section1', 'section2', 'section3', 'section4', 'section5', 'section6'],
+            
+            // afterLoad: function(anchorLink, index){
+            //     if (index == 1) {
+            //         $(".moveimg").animate({left: 0}, 500);
+            //     }
+            //     if (index == 2) {
+            //         $(".s2_title").animate({'padding-top': 100}, 500);
+            //     }
+            //     if (index == 3) {
+            //         $(".phone>img").animate({top: 0, opacity: 1}, 500);
+            //     } else {}
+            // }
+        });
+    </script>
+</body>
+</html>

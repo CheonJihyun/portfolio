@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MAIN</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div id="banner">
+        <div id="roll">
+            <script>
+                let input = "";
+                for(var i=0 ; i<36 ; i++) {
+                    input += "<div class='side'>";
+                    input += "</div>";
+                }
+                document.getElementById("roll").innerHTML = input;
+            </script>
+        </div>
+    </div>
+    <div id="title">
+        <h1>media palette</h1>
+    </div>
+    <div id="menu">
+        <div class="menu_icon">
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="menu_list clear">
+            <a href="https://cheonjihyun.github.io/biennale/"><li></li></a>
+            <a href="1.html"><li></li></a>
+        </ul>
+    </div>
+    <script>
+        $("#title").click(function(){
+            $("#menu").fadeIn(500);
+        });
+        $(".menu_icon").click(function(){
+            $("#menu").fadeOut(500);
+        });
+    </script>
+    <script>
+        var list = document.querySelectorAll(".side");
+        var wall = [];
+        var degree = [];
+        var radius = 50/(Math.tan(Math.PI/18));
+        for (var i=0 ; i<36 ; i++) {
+            degree[i] = 10*i-5;
+        }
+        for (var i=0 ; i<36 ; i++) {
+            wall[i] = new Object();
+            wall[i] = {
+                degree: degree[i],
+                radian: function() {return Math.PI*this.degree/180},
+                x: function() {return radius*(Math.sin(this.radian()))},
+                z: function() {return radius*(Math.cos(this.radian()))}
+            };
+        }
+       
+        for (var i=0 ; i<36 ; i++) {
+            list[i].style.transform = `translate3d(${wall[i].x()}px, 0, ${wall[i].z()}px) rotate3d(0, 1, 0, ${wall[i].degree}deg)`;
+            list[i].style.backgroundColor = "hsla("+(10*i)+", 18%, 75%, 0.85)";
+        }
+        
+       document.getElementById("banner").onmouseover = function roll1(){
+           document.getElementById("roll").style.transform = "perspective(500px) translateX(50%) translateY(10%) translateZ(-300px) rotateX(0)";
+           for (var i=0 ; i<36 ; i++) {
+               wall[i].degree += 10;
+               list[i].style.transform = `translate3d(${wall[i].x()}px, 0, ${wall[i].z()}px) rotate3d(0, 1, 0, ${wall[i].degree}deg)`;
+           }
+       };
+       document.getElementById("banner").onmouseout = function roll2(){
+           document.getElementById("roll").style.transform = "perspective(500px) translateX(50%) translateZ(-500px) rotateX(-90deg)";
+       };
+    </script>
+</body>
+</html>
